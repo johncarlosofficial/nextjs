@@ -33,7 +33,14 @@ To run the project locally, follow these steps:
     npm install
     ```
 
-4. **Run the Development Server**:
+4. **Run Docker**:
+   The `docker-compose.yaml` file in the root directory configures the application services. To start the application, run:
+
+    ```bash
+    docker-compose up
+    ```
+
+5. **Run the Development Server**:
    Start the Next.js development server:
 
     ```bash
