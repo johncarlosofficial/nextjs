@@ -53,6 +53,11 @@ To run the project locally, follow these steps:
 
 -   **EditorConfig**: An `.editorconfig` file is included to maintain consistent coding styles between different editors and IDEs. Make sure to install the EditorConfig extension in your code editor to benefit from this.
 
+-   **Jest Testing Framework**: This project includes Jest for testing, along with a watch mode to re-run tests automatically as changes are made. The following scripts are available:
+
+    -   `npm run test`: Runs the Jest test suite once.
+    -   `npm run test:watch`: Runs Jest in watch mode, which automatically re-runs tests when files are changed.
+
 ### Project Structure
 
 Here’s a brief overview of the important files and directories:
