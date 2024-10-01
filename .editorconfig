@@ -1,0 +1,20 @@
+# top-most EditorConfig file (root of the project)
+root = true
+
+# General settings for all files
+[*]
+charset = utf-8         # Character encoding
+indent_style = space     # Use spaces for indentation (or 'tab' for tabs)
+indent_size = 4          # Indentation size (number of spaces)
+end_of_line = lf         # Unix-style line endings (lf = line feed)
+insert_final_newline = true  # Ensure the file ends with a newline
+trim_trailing_whitespace = true  # Remove any trailing whitespace
+
+# Specific settings for Markdown files
+[*.md]
+max_line_length = off    # No line length limit for Markdown files
+trim_trailing_whitespace = false  # Allow trailing whitespace in Markdown
+
+# Specific settings for JSON files
+[*.json]
+indent_size = 2          # Use 2 spaces for JSON files
