@@ -10,6 +10,10 @@ To run the project locally, follow these steps:
 
 -   **Node.js**: Ensure you have Node.js installed. This project uses a specific version of Node.js, which you can set up using **NVM (Node Version Manager)**.
 
+-   **Docker**: Docker is required to containerize the PostgreSQL database.
+
+-   **PostgreSQL Client (psql)**: To interact with the PostgreSQL database, you’ll need the PostgreSQL client `psql`.
+
 ### Setup Instructions
 
 1. **Clone the Repository**:
