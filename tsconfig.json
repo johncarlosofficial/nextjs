@@ -20,8 +20,15 @@
     "baseUrl": ".",
     "paths": {
       "infra/*": ["infra/*"]
-    }
+    },
+    "types": ["jest", "@testing-library/jest-dom"] // Add this line
   },
-  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "__tests__/page.test.tsx"
+  ],
   "exclude": ["node_modules"]
 }
