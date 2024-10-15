@@ -8,11 +8,11 @@ To run the project locally, follow these steps:
 
 ### Prerequisites
 
--   **Node.js**: Ensure you have Node.js installed. This project uses a specific version of Node.js, which you can set up using **NVM (Node Version Manager)**.
+- **Node.js**: Ensure you have Node.js installed. This project uses a specific version of Node.js, which you can set up using **NVM (Node Version Manager)**.
 
--   **Docker**: Docker is required to containerize the PostgreSQL database.
+- **Docker**: Docker is required to containerize the PostgreSQL database.
 
--   **PostgreSQL Client (psql)**: To interact with the PostgreSQL database, you’ll need the PostgreSQL client `psql`.
+- **PostgreSQL Client (psql)**: To interact with the PostgreSQL database, you’ll need the PostgreSQL client `psql`.
 
 ### Setup Instructions
 
@@ -67,27 +67,27 @@ To run the project locally, follow these steps:
 
 ### Project Configuration
 
--   **Prettier**: This project uses Prettier for code formatting. The following scripts are included in the `package.json`:
+- **Prettier**: This project uses Prettier for code formatting. The following scripts are included in the `package.json`:
 
-    -   `prettier --check .`: Checks your code for formatting issues.
-    -   `prettier --write .`: Automatically formats your code.
+  - `prettier --check .`: Checks your code for formatting issues.
+  - `prettier --write .`: Automatically formats your code.
 
     Additionally, a `.prettierignore` file is provided to specify files and directories that should be ignored by Prettier.
 
--   **EditorConfig**: An `.editorconfig` file is included to maintain consistent coding styles between different editors and IDEs. Make sure to install the EditorConfig extension in your code editor to benefit from this.
+- **EditorConfig**: An `.editorconfig` file is included to maintain consistent coding styles between different editors and IDEs. Make sure to install the EditorConfig extension in your code editor to benefit from this.
 
--   **Jest Testing Framework**: This project includes Jest for testing, along with a watch mode to re-run tests automatically as changes are made. The following scripts are available:
+- **Jest Testing Framework**: This project includes Jest for testing, along with a watch mode to re-run tests automatically as changes are made. The following scripts are available:
 
-    -   `npm run test`: Runs the Jest test suite once.
-    -   `npm run test:watch`: Runs Jest in watch mode, which automatically re-runs tests when files are changed.
+  - `npm run test`: Runs the Jest test suite once.
+  - `npm run test:watch`: Runs Jest in watch mode, which automatically re-runs tests when files are changed.
 
 ### Project Structure
 
 Here’s a brief overview of the important files and directories:
 
--   **`.nvmrc`**: Specifies the Node.js version for the project.
--   **`package.json`**: Lists project dependencies and scripts.
--   **`.editorconfig`**: Configures code formatting settings for various editors.
--   **`.gitignore`**: Specifies files and directories that should be ignored by Git.
--   **`.prettierignore`**: Specifies files and directories to be ignored by Prettier.
--   **`app/`**: This directory should contain your application code.
+- **`.nvmrc`**: Specifies the Node.js version for the project.
+- **`package.json`**: Lists project dependencies and scripts.
+- **`.editorconfig`**: Configures code formatting settings for various editors.
+- **`.gitignore`**: Specifies files and directories that should be ignored by Git.
+- **`.prettierignore`**: Specifies files and directories to be ignored by Prettier.
+- **`app/`**: This directory should contain your application code.
