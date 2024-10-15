@@ -1,5 +1,4 @@
 import React from "react";
-import AuthProvider from "./auth/provider";
 
 export default function RootLayout({
     children,
@@ -8,9 +7,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body>
-                <AuthProvider>{children}</AuthProvider>
-            </body>
+            <body>{children}</body>
         </html>
     );
 }

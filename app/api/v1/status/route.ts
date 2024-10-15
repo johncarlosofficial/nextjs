@@ -1,7 +1,7 @@
 import database from "infra/database";
 
 // Define a named export for the GET method
-export async function GET(request: Request) {
+export async function GET(_request: Request) {
     const updatedAt = new Date().toISOString();
 
     const databaseVersionResult = await database.query("SHOW server_version;");
