@@ -74,4 +74,3 @@ const SignUp = () => {
 };
 
 export default SignUp;
-// Export the component so it can be used in other parts of the application.
