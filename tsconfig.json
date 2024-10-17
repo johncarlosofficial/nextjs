@@ -21,14 +21,14 @@
     "paths": {
       "infra/*": ["infra/*"]
     },
-    "types": ["jest", "@testing-library/jest-dom"] // Add this line
+    "types": ["jest", "@testing-library/jest-dom"]
   },
   "include": [
     "next-env.d.ts",
-    ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "__tests__/page.test.tsx"
+    "__tests__/page.test.tsx",
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }
