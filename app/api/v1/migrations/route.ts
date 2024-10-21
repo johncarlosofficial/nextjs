@@ -28,3 +28,8 @@ export async function GET() {
     const migrations = await runMigrations(true);
     return new Response(JSON.stringify({ migrations }));
 }
+
+export async function POST() {
+    const migrations = await runMigrations(false);
+    return new Response(JSON.stringify({ migrations }));
+}
