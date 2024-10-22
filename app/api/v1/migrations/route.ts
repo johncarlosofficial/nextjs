@@ -4,10 +4,7 @@ import database from "infra/database";
 
 const runMigrations = async (dryRun: boolean) => {
     const dbClient = await database.getNewClient();
-
     try {
-        console.log(`Running migrations - Dry Run: ${dryRun}`);
-
         return await migrationRunner({
             dbClient,
             dryRun,
@@ -24,11 +21,13 @@ const runMigrations = async (dryRun: boolean) => {
 };
 
 export async function GET() {
-    const migrations = await runMigrations(true);
-    return new Response(JSON.stringify({ migrations }));
+    const pendingMigrations = await runMigrations(true);
+    return new Response(JSON.stringify({ pendingMigrations }), { status: 200 });
 }
 
 export async function POST() {
-    const migrations = await runMigrations(false);
-    return new Response(JSON.stringify({ migrations }));
+    const migratedMigrations = await runMigrations(false);
+
+    const status = migratedMigrations.length > 0 ? 201 : 200;
+    return new Response(JSON.stringify({ migratedMigrations }), { status });
 }
