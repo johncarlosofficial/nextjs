@@ -1,18 +1,15 @@
 import migrationRunner from "node-pg-migrate";
 import { join } from "node:path";
+import database from "infra/database";
 
 const runMigrations = async (dryRun: boolean) => {
-    const url = process.env.DATABASE_URL;
-
-    if (!url) {
-        throw new Error("DATABASE_URL is not defined");
-    }
-
-    console.log(`Running migrations - Dry Run: ${dryRun}`);
+    const dbClient = await database.getNewClient();
 
     try {
+        console.log(`Running migrations - Dry Run: ${dryRun}`);
+
         return await migrationRunner({
-            databaseUrl: url,
+            dbClient,
             dryRun,
             dir: join("infra", "migrations"),
             direction: "up",
@@ -20,7 +17,9 @@ const runMigrations = async (dryRun: boolean) => {
         });
     } catch (error) {
         console.error("Migration error:", error);
-        throw error; // Rethrow to propagate error to the caller
+        throw error;
+    } finally {
+        await dbClient.end();
     }
 };
 
