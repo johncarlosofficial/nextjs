@@ -2,7 +2,7 @@ import { Client } from "pg";
 
 interface QueryObject {
     text: string;
-    values?: any[];
+    values?: unknown[];
 }
 
 async function query(queryObject: QueryObject) {
@@ -42,10 +42,11 @@ async function getNewClient() {
     return client;
 }
 
-export default {
+const database = {
     query,
     getNewClient,
 };
+export default database;
 
 function getSSLValues() {
     if (process.env.POSTGRES_CA) {

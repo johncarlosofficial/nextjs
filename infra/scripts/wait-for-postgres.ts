@@ -1,4 +1,4 @@
-const { exec } = require("node:child_process");
+import { exec } from "node:child_process";
 
 function checkPostgres(retries = 50) {
     exec(
@@ -6,7 +6,7 @@ function checkPostgres(retries = 50) {
         handleReturn,
     );
 
-    function handleReturn(error: any, stdout: string) {
+    function handleReturn(error: unknown, stdout: string) {
         if (error) {
             console.error("Error checking Postgres:", error);
             return;

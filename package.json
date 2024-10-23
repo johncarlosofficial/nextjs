@@ -37,6 +37,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
+    "@types/async-retry": "^1.4.9",
     "@types/jest": "^29.5.13",
     "@types/node": "^22.7.4",
     "@types/node-fetch": "^2.6.11",
