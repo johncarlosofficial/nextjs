@@ -1,4 +1,9 @@
 import fetch from "node-fetch";
+import orchestrator from "infra/orchestrator";
+
+beforeAll(async () => {
+    await orchestrator.waitForAllServices();
+});
 
 interface ApiStatusResponse {
     updated_at: string;
