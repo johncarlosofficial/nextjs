@@ -15,7 +15,8 @@
     "test:watch": "jest --watchAll --runInBand",
     "migration:create": "node-pg-migrate -m infra/migrations create",
     "migration:up": "node-pg-migrate -m infra/migrations --envPath .env.development up",
-    "wait-for-postgres": "ts-node infra/scripts/wait-for-postgres.ts"
+    "wait-for-postgres": "ts-node infra/scripts/wait-for-postgres.ts",
+    "localdb:connect": "docker exec -it postgres-container psql -U localuser -d localdb"
   },
   "dependencies": {
     "@commitlint/cli": "^19.5.0",
@@ -38,6 +39,7 @@
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@types/async-retry": "^1.4.9",
+    "@types/bcrypt": "^5.0.2",
     "@types/jest": "^29.5.13",
     "@types/node": "^22.7.4",
     "@types/node-fetch": "^2.6.11",
